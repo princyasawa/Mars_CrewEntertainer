@@ -1,0 +1,120 @@
+<html>
+  <head>
+    <title> Game </title>
+    <script name="text/javascript" src='game.js'> </script>
+    <style>
+      body{
+        background: linear-gradient(black, grey);
+        text-align: center;
+        font-family: sans-serif;
+      }
+
+      h2 {
+        margin-top: 50px;
+         color: white;        
+      }
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      p {
+        color: white;
+      }
+      table {
+        border: 0;
+        display: flex;
+        float: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      #turn {
+        font-size: 30px;
+      }
+
+      img {
+        padding-bottom: 15px;
+      }
+      #newgame {
+  background-color: #0080ff;
+  border: none;
+  padding: 13px 26px;
+  border-radius: 2px;
+  color: #ffffff;
+  font-family: 'Gloria Hallelujah', cursive;
+  cursor: pointer;
+  font-weight: 600;
+  width: 20%;
+  margin-top: 10px; 
+  font-size: 20px;
+}
+    </style>
+    
+  </head>
+  
+  <body>
+    <h2> TIC TAC TOE </h2>
+
+    
+    
+    <br/>
+    <br/>
+
+		<a href="../index.html" > Back to Home page </a>
+	
+    <p id="turn" ><B>Player 1 to play</B></p>
+    
+	  <table cellspacing=10 cellpadding=10>
+		<tr>
+      <td valign=top>
+          <img align=left  width=100 height=100 src="../dist/assets/x.svg"/>
+      <br/>
+		      <p style="text-align: left;" color=YELLOW><b> Player 1	</b> </p>
+		  </td>
+		<td>
+    <table cellpadding=10 cellspacing=10 border=1>
+      <tr>
+        <td onclick="play(this)" id="00">
+          <img width=100 height=100 border=0 src="blank.png"/>
+        </td>
+        <td onclick="play(this)" id="01">
+          <img width=100 height=100 border=0 src="blank.png"/>
+        </td>
+        <td onclick="play(this)" id="02">
+          <img width=100 height=100 border=0 src="blank.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td onclick="play(this)" id="10">
+          <img width=100 height=100 border=0 src="blank.png"/>
+        </td>
+        <td onclick="play(this)" id="11">
+          <img width=100 height=100 border=0 src="blank.png"/>
+        </td>
+        <td onclick="play(this)" id="12">
+          <img width=100 height=100 border=0 src="blank.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td onclick="play(this)" id="20">
+          <img width=100 height=100 border=0 src="blank.png"/>
+        </td>
+        <td onclick="play(this)" id="21">
+          <img width=100 height=100 border=0 src="blank.png"/>
+        </td>
+        <td onclick="play(this)" id="22">
+          <img width=100 height=100 border=0 src="blank.png"/>
+        </td>
+      </tr>
+    </table>
+	 </td>
+	 <td valign=top>
+   <img align=right width=100 height=100 src="../dist/assets/o.svg"/>
+		<p style="text-align:right;" color=YELLOW><b> Player 2 </b> </p>
+	</td></tr>
+  </table>
+
+  <button id="newgame"><a href="">Play Again </a></button>
+
+  </body>
+</html>
