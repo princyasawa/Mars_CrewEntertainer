@@ -1,0 +1,174 @@
+<html>
+  <head>
+    <title> Game </title>
+    <script name="text/javascript" src='game.js'> </script>
+    <style>
+      body{
+        background: linear-gradient( rgb(247, 200, 214),rgb(199, 161, 179));
+        text-align: center;
+        font-family: cursive;
+      }
+
+      h1 {
+        margin-top: 20px;
+        margin-bottom: 0px;
+         color:purple; 
+         font-size: 40px;       
+      }
+      h3 {
+        color:rgb(153, 99, 153);
+        text-decoration: none;
+        margin-top: 5px ;
+      }
+      h2 {
+        color:rgb(61, 18, 61);
+        font-size: medium;
+      }
+      table {
+        border: 20;
+        display: flex;
+        float: center;
+        justify-content: center;
+        text-align: center;
+        
+      }
+
+      #turn {
+        font-size: 25px;
+      }
+
+      img {
+        padding-bottom: 5px;
+      }
+      #newgame, #resetScore
+      {
+  background-color: #af0a86;
+  border: 5;
+  padding: 13px 15px;
+  border-radius: 30px;
+  color: #fafafd;
+  font-family: 'Gloria Hallelujah', cursive;
+  cursor: pointer;
+  font-weight: 600;
+  width: 20%;
+  margin-top: -15px; 
+  font-size: 20px;
+}
+
+#scoreboard {
+    width: 500px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+.score {
+    position: relative;
+    display: inline-block;
+}
+
+p,
+.player-one,
+.player-two {
+    text-align: left;
+    margin-bottom: 1px;
+    font-size: 12px;
+    font-family: Open Sans, Arial, serif;
+    color: #FF69B4;
+}
+
+.playerX,
+.playerO,
+.tie {
+    border: 5px solid #b2ffb2;
+    border-radius: 5px;
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    padding-top: 5px;
+    text-align: center;
+    font-family: 'Chewy', cursive;
+    font-size: 400%;
+    color: #b2ffb2;
+    background-color: #FF69B4;
+}
+
+
+
+
+    </style>
+    
+  </head>
+  
+  <body>
+    <h1> TIC TAC TOE </h1>
+    <style type="text/css">
+      body {
+        color: rgb(189, 12, 130);
+        background-color: #3ddada;
+        font-style:italic ;
+        }
+
+
+      </style>
+    <br></br>
+  	<h3 href="../index.html" > Back to Home page </h3>
+	
+    <h2 id="turn" ><B>Player 1 to play</B></h2>
+    
+	  <table cellspacing=10 cellpadding=10>
+		<tr>
+      <td valign=top>
+          <img valign=center  width=100 height=100 src="../dist/assets/x.svg"/>
+      <br/>
+		      <p style="text-align:center;" color:YELLOW><b> Player 1	</b> </p>
+		  </td>
+		<td>
+    <table cellpadding=5 cellspacing=5 border=5>
+      <tr>
+        <td onclick="play(this)" id="00">
+          <img width=100 height=100 border=10 src="blank.png"/>
+        </td>
+        <td onclick="play(this)" id="01">
+          <img width=100 height=100 border=10 src="blank.png"/>
+        </td>
+        <td onclick="play(this)" id="02">
+          <img width=100 height=100 border=10 src="blank.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td onclick="play(this)" id="10">
+          <img width=100 height=100 border=10 src="blank.png"/>
+        </td>
+        <td onclick="play(this)" id="11">
+          <img width=100 height=100 border=10 src="blank.png"/>
+        </td>
+        <td onclick="play(this)" id="12">
+          <img width=100 height=100 border=10 src="blank.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td onclick="play(this)" id="20">
+          <img width=100 height=100 border=10 src="blank.png"/>
+        </td>
+        <td onclick="play(this)" id="21">
+          <img width=100 height=100 border=10 src="blank.png"/>
+        </td>
+        <td onclick="play(this)" id="22">
+          <img width=100 height=100 border=10 src="blank.png"/>
+        </td>
+      </tr>
+    </table>
+	 </td>
+	 <td valign=top>
+   <img valign=center  width=100 height=100 src="../dist/assets/o.svg"/>
+		<p style="text-align:center;" color:YELLOW><b> Player 2 </b> </p>
+	</td></tr>
+  </table>
+
+  <div class="buttons" style="text-align:center;">
+    <button id="newgame">New Game</button>
+    <button id="resetScore">Reset Score</button>
+</div>
+
+  </body>
+</html>
