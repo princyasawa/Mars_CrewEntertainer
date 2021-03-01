@@ -55,26 +55,25 @@ class Board {
         if(this.isEmpty()) return false;
 
         //Checking Horizontal Wins
-        if(this.state[0] == this.state[1] && this.state[0] == this.state[2] && this.state[0]) {
-            return {'winner': this.state[0], 'direction': 'H', 'row': 1}; 
-        }
-        if(this.state[3] == this.state[4] && this.state[3] == this.state[5] && this.state[3]) {
-            return {'winner': this.state[3], 'direction': 'H', 'row': 2};
-        }
-        if(this.state[6] == this.state[7] && this.state[6] == this.state[8] && this.state[6]) {
-            return {'winner': this.state[6], 'direction': 'H', 'row': 3};
+        var nm=0;
+        for(var i=0; i<=6; i=i+3){
+            nm++;
+            if(this.state[i] == this.state[i+1] && this.state[i] == this.state[i+2] && this.state[i]){
+                return {'winner': this.state[i], 'direction': 'H', 'row': nm};
+            }
         }
 
+        nm=0;
+
         //Checking Vertical Wins
-        if(this.state[0] == this.state[3] && this.state[0] == this.state[6] && this.state[0]) {
-            return {'winner': this.state[0], 'direction': 'V', 'row': 1};
+        for(var i=0; i<3; i++){
+            nm++;
+            if(this.state[i] == this.state[i+3] && this.state[i]==this.state[i+6] && this.state[i]){
+                return {'winner': this.state[i], 'direction': 'V', 'row': nm};
+            }
         }
-        if(this.state[1] == this.state[4] && this.state[1] == this.state[7] && this.state[1]) {
-            return {'winner': this.state[1], 'direction': 'V', 'row': 2};
-        }
-        if(this.state[2] == this.state[5] && this.state[2] == this.state[8] && this.state[2]) {
-            return {'winner': this.state[2], 'direction': 'V', 'row': 3};
-        }
+
+        nm=0;
 
         //Checking Diagonal Wins
         if(this.state[0] == this.state[4] && this.state[0] == this.state[8] && this.state[0]) {
@@ -83,6 +82,7 @@ class Board {
         if(this.state[2] == this.state[4] && this.state[2] == this.state[6] && this.state[2]) {
             return {'winner': this.state[2], 'direction': 'D', 'row': 2};
         }
+
 
         //If no winner but the board is full, then it's a draw
         if(this.isFull()) {
